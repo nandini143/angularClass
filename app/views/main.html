@@ -1,0 +1,29 @@
+<section class="paperFormExample">
+<div class="header">
+<h1>SAMPLE FORM</h1></div>
+<div class="body">
+<form name="sampleAngularForm" class="form-group">
+
+<label for="fullName">Full Name</label>
+
+<input type="text" id="fullName" name="fullName" class="form-control" ng-model="user.fullName" ng-change="submitForm(user)"/>
+
+
+<label for="email">Email</label>
+
+<input type="email" id="email" name="email" class="form-control" ng-model="user.email"/>
+<p style="color:red" ng-show="sampleAngularForm.email.$invalid"> Email format is wrong </p>
+
+<label for="Phone">Phone</label>
+
+<input type="number" id="phone" name="phone" class="form-control" ng-model="user.phone"/>
+
+
+<button type="submit" name="submitButton" class="btn btn-primary"
+ng-click="submitForm(user)"
+ng-disabled="sampleAngularForm.fullName.$pristine || sampleAngularForm.email.$pristine || sampleAngularForm.fullName.$pristine ||sampleAngularForm.$invalid ">Submit</button>
+<h5>{{ user.total}}</h5>
+</form>
+</div>
+<div class="footer"></div>
+</section>
